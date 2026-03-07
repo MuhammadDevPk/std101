@@ -1,0 +1,23 @@
+{% comment %} <h1> Hello World </h1> {% endcomment %}
+<h1> {{ section.settings.title }}</h1>
+
+
+{% schema %}
+{
+    "name" : "Hello World",
+    "settings" : [
+        {
+            "type" : "text",
+            "id" : "title",
+            "label" : "Title",
+            "default" : "Hello World"
+        }
+    ],
+    "presets" : [
+        {
+            "name" : "Hello World"
+        }
+    ]
+}
+ 
+{% endschema %}

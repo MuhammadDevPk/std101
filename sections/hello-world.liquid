@@ -1,3 +1,9 @@
+{% for block in section.blocks %}
+
+    <h3>{{ block.type }}</h3>
+
+{% endfor %}
+
 {% schema %}
 {
     "name" : "Hello World",
@@ -19,6 +25,24 @@
                     "id" : "text_color",
                     "label" : "Text Color",
                     "default" : "#000000"
+                }
+            ]
+        },
+        {
+            "name" : "Subtitle",
+            "type" : "subtitle",
+            "settings" : [
+                {
+                    "type" : "color",
+                    "id" : "bg_color",
+                    "label" : "Background Color",
+                    "default" : "#eeeeee"
+                },
+                {
+                    "type" : "color",
+                    "id" : "text_color",
+                    "label" : "Text Color",
+                    "default" : "#ff0000"
                 }
             ]
         }

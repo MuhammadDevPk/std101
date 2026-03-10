@@ -1,8 +1,13 @@
-{% for block in section.blocks %}
+{%- for block in section.blocks -%}
 
-    <h3>{{ block.type }}</h3>
+    {%- case block.type -%}
+        {%- when 'title' -%}
+            <h2>Title</h2>
+        {%- when 'subtitle' -%}
+            <h5>Subtitle</h5>
+    {%- endcase -%}
 
-{% endfor %}
+{%- endfor -%}
 
 {% schema %}
 {

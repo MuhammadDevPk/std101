@@ -20,6 +20,7 @@
     {% endfor %}
 {% endstyle %}
 
+<div style="text-align: {{ section.settings.text_alignment }}">
 {%- for block in section.blocks -%}
 
     {%- case block.type -%}
@@ -30,11 +31,32 @@
     {%- endcase -%}
 
 {%- endfor -%}
-
+</div>
 {% schema %}
 {
     "name" : "Hello World",
     "settings" : [
+        {
+            "type" : "select",
+            "id" : "text_alignment",
+            "label" : "Text Alignment",
+            "default" : "center",
+            "info" : "align the text in section",
+            "options" : [
+                {
+                    "value" : "left",
+                    "label" : "Left"
+                },
+                {
+                    "value" : "center",
+                    "label" : "Center"
+                },
+                {
+                    "value" : "right",
+                    "label" : "Right"
+                }
+            ]
+        }
     ],
     "blocks" : [
         {

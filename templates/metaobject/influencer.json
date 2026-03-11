@@ -8,6 +8,48 @@
  * ------------------------------------------------------------
  */
 {
-  "sections": {},
-  "order": []
+  "sections": {
+    "image_with_text_3pw3jp": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_8YWpTY": {
+          "type": "heading",
+          "source": "{{ metaobject }}",
+          "settings": {
+            "heading": "{{ metaobject.name.value }}"
+          }
+        },
+        "text_Vwqmey": {
+          "type": "text",
+          "source": "{{ metaobject }}",
+          "settings": {
+            "text": "{{ metaobject.description | metafield_tag }}"
+          }
+        }
+      },
+      "block_order": [
+        "heading_8YWpTY",
+        "text_Vwqmey"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "{{ metaobject.image.value }}",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "image_with_text_3pw3jp"
+  ]
 }
